@@ -1,0 +1,68 @@
+*{
+  font-family: sans-serif;
+  color: blue;
+
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+
+  
+}
+.hover-swap {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: black;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.hover-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.default-text {
+  opacity: 1;
+}
+
+.hover-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hover-swap:hover .default-text {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.hover-swap:hover .hover-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  min-height: 100lvh;
+  justify-content: space-evenly;
+  background-color: black;
+  
+  padding: 10px;
+}
+.image{
+  align-items:flex-end;
+}
